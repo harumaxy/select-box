@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dahjlnvamrt5a"]
+
+[ext_resource type="Script" path="res://scripts/Unit.gd" id="1_fevai"]
+[ext_resource type="Texture2D" uid="uid://b41lisito0xvk" path="res://icon.svg" id="1_twbxr"]
+[ext_resource type="Material" uid="uid://b8y2dcvvxotov" path="res://shaders/selected_outline.tres" id="2_ncf5d"]
+[ext_resource type="Script" path="res://scripts/SelectManager.gd" id="2_p1q4w"]
+
+[node name="Main" type="Node"]
+
+[node name="Unit" type="CharacterBody2D" parent="." groups=["selectable"]]
+position = Vector2(333, 366)
+script = ExtResource("1_fevai")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Unit"]
+material = ExtResource("2_ncf5d")
+texture = ExtResource("1_twbxr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unit"]
+visible = false
+polygon = PackedVector2Array(64, -60.8, 64, 59, 59.6, 64, -60.1, 64, -64, 60.7, -64, -59, -59, -63.8, 59.1, -64)
+
+[node name="Unit2" type="CharacterBody2D" parent="." groups=["selectable"]]
+position = Vector2(877, 286)
+script = ExtResource("1_fevai")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Unit2"]
+material = ExtResource("2_ncf5d")
+texture = ExtResource("1_twbxr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unit2"]
+visible = false
+polygon = PackedVector2Array(64, -60.8, 64, 59, 59.6, 64, -60.1, 64, -64, 60.7, -64, -59, -59, -63.8, 59.1, -64)
+
+[node name="Unit3" type="CharacterBody2D" parent="." groups=["selectable"]]
+position = Vector2(766, 521)
+script = ExtResource("1_fevai")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Unit3"]
+material = ExtResource("2_ncf5d")
+texture = ExtResource("1_twbxr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unit3"]
+visible = false
+polygon = PackedVector2Array(64, -60.8, 64, 59, 59.6, 64, -60.1, 64, -64, 60.7, -64, -59, -59, -63.8, 59.1, -64)
+
+[node name="Unit4" type="CharacterBody2D" parent="." groups=["selectable"]]
+position = Vector2(457, 515)
+script = ExtResource("1_fevai")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Unit4"]
+material = ExtResource("2_ncf5d")
+texture = ExtResource("1_twbxr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unit4"]
+visible = false
+polygon = PackedVector2Array(64, -60.8, 64, 59, 59.6, 64, -60.1, 64, -64, 60.7, -64, -59, -59, -63.8, 59.1, -64)
+
+[node name="SelectManager" type="Node2D" parent="."]
+script = ExtResource("2_p1q4w")
